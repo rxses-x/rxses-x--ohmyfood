@@ -8,6 +8,7 @@ img, video {
   padding: 0;
   margin: 0;
   max-width: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -32,11 +33,6 @@ ul {
 
 .fa-solid-purple {
   color: #9356DC;
-}
-
-.primary__container {
-  width: 375px;
-  max-width: 375px;
 }
 
 .header {
@@ -96,9 +92,9 @@ ul {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
+  font-family: Roboto;
 }
 .primary__content--title {
-  font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
@@ -106,7 +102,6 @@ ul {
   color: #000000;
 }
 .primary__content--secondtitle {
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 300;
   line-height: 21.09px;
@@ -124,14 +119,22 @@ ul {
   justify-content: center;
   align-items: center;
   margin-top: 27px;
+  transition-timing-function: linear;
+  transition: transform 500ms ease;
 }
 .primary__content--button p {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
   text-align: center;
   color: #FFFFFF;
+}
+.primary__content--button:hover {
+  cursor: pointer;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(193.33deg, #a16be0, #ff93e1);
+  transform: scale(1.03);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .secondary__content {
@@ -140,9 +143,9 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 48px 20px 68px;
+  font-family: Roboto;
 }
 .secondary__content--title {
-  font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
@@ -157,7 +160,6 @@ ul {
   padding-bottom: 24.92px;
 }
 .secondary__content--buttons--number {
-  font-family: Roboto;
   font-size: 14.18px;
   font-weight: 500;
   line-height: 16.62px;
@@ -185,13 +187,12 @@ ul {
   align-items: center;
 }
 .secondary__content--buttons--button i {
-  margin-left: 33.47px;
+  padding-left: 33.47px;
   width: 13.02px;
   height: 19.9px;
   padding-right: 27px;
 }
 .secondary__content--buttons--button p {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
@@ -221,21 +222,41 @@ ul {
   width: 100%;
   height: 251px;
   border-radius: 15px;
+  overflow: hidden;
   background-color: #FFFFFF;
   margin-bottom: 18px;
+  text-align: justify;
 }
-.terciary__content--cards img {
+.terciary__content--cards--image {
+  position: relative;
+}
+.terciary__content--cards--image img {
   width: 100%;
   height: 174px;
-  border-radius: 15px 15px 0px 0px;
-  object-fit: cover;
+  display: block;
+}
+.terciary__content--cards--image--new {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  width: 80px;
+  height: 29px;
+  padding: 7px 9px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: center;
+  color: #008766;
+  background: #99E2D0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .terciary__content--cards--card-content {
   padding: 16px 13px;
-  width: 100%;
+  position: relative;
+  font-family: Roboto;
 }
 .terciary__content--cards--card-content--text--title {
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
@@ -243,7 +264,6 @@ ul {
   padding-bottom: 5px;
 }
 .terciary__content--cards--card-content--text--subtitle {
-  font-family: Roboto;
   font-size: 17px;
   font-weight: 300;
   line-height: 19.92px;
@@ -255,17 +275,23 @@ ul {
   padding-bottom: 12px;
 }
 .terciary__content--cards--card-content--like {
-  display: flex;
-  position: relative;
-  bottom: 34px;
-  justify-content: flex-end;
-  box-sizing: border-box;
+  position: absolute;
+  top: 3vh;
+  right: 3vh;
+  transition: color 0.3s, background 0.3s;
 }
-.terciary__content--cards--card-content--like i {
-  font-weight: unset;
-}
-.terciary__content--cards--card-content--like :hover {
+.terciary__content--cards--card-content--like::before {
+  content: "";
+  color: transparent;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.terciary__content--cards--card-content--like:hover::before {
+  opacity: 1;
 }
 
 .footer {
@@ -329,6 +355,109 @@ ul {
 }
 .footer__link--normal a {
   font-weight: 400;
+}
+
+.primary__restaurant__content--cards {
+  height: 275px;
+}
+.primary__restaurant__content--cards--image {
+  height: 275px;
+}
+.primary__restaurant__content--cards--image img {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+.secondary__restaurant__content {
+  position: relative;
+  bottom: 6vh;
+  padding: 32px 17px;
+  background: #F6F6F6;
+  border-radius: 50px;
+  text-align: justify;
+}
+.secondary__restaurant__content--title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 40.82px;
+}
+.secondary__restaurant__content--like {
+  position: absolute;
+  top: 4.5vh;
+  right: 5vh;
+  width: 21px;
+  height: 22px;
+}
+.secondary__restaurant__content--like i {
+  width: 100%;
+  height: 100%;
+}
+.secondary__restaurant__content--buttons {
+  padding-top: 42px;
+  font-family: Roboto;
+  text-align: justify;
+}
+.secondary__restaurant__content--buttons--button {
+  position: relative;
+}
+.secondary__restaurant__content--buttons--button--cards {
+  display: grid;
+  padding: 12px 47px 36px 15px;
+  width: 100%;
+  height: 69px;
+  border-radius: 15.04px;
+  background: #FFFFFF;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  padding-bottom: 5px;
+}
+.secondary__restaurant__content--buttons--button--cards--title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  padding-bottom: 5px;
+  height: 21px;
+  border: 1px dotted #99E2D0;
+}
+.secondary__restaurant__content--buttons--button--cards--subtitle {
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  height: 19px;
+  border: 1px dotted #99E2D0;
+}
+.secondary__restaurant__content--buttons--button--price {
+  position: absolute;
+  top: 4.2vh;
+  right: 1.5vh;
+}
+.secondary__restaurant__content--buttons--button--price p {
+  bottom: 1.8vh;
+  left: 29.5vh;
+  font-size: 15.04px;
+  font-weight: 700;
+  line-height: 17.63px;
+}
+.secondary__restaurant__content--buttons--title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+  padding-bottom: 7px;
+  height: 27px;
+  color: #000000;
+}
+.secondary__restaurant__content--buttons--border {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 0px;
+  bottom: 4px;
+  border: 2px solid #99E2D0;
+  margin-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

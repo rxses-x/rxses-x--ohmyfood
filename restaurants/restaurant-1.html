@@ -6,7 +6,7 @@
         <title>Ohmyfood Paris</title>
         <meta name="description" content="Ohmyfood est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et de réduire leur temps d’attente dans les restaurants, car leur menu est préparé à l’avance.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -18,30 +18,39 @@
     <body>
         <div class="primary__container">
             <header class="header">
+                <i class="fa-solid fa-arrow-left"></i>
                 <h1 class="header__title">Ohmyfood</h1>
-                <div class="header__search">
-                    <form>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input type="text" placeholder="Paris, Belleville" name="search">
-                    </form>
-                </div>
             </header>
             <main>
-                <div class="primary__content">
-                    <h2 class="primary__content--title">Réservez le menu qui vous convient</h2>
-                    <p class="primary__content--secondtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                    <div class="primary__content--button">
-                        <p>Explorer nos restaurants</p>
-                    </div>
+                <div class="primary__restaurant__content">
+                    <a href="#">
+                        <article class="primary__restaurant__content--cards">
+                            <div class="primary__restaurant__content--cards--image">
+                                <img src="../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image de La palette du goût">
+                            </div>
+                        </article>
+                    </a>
                 </div>
-                <div class="secondary__content">
-                    <h2 class="secondary__content--title">Fonctionnement</h2>
-                    <div class="secondary__content--buttons">
-                        <p class="secondary__content--buttons--number">1</p>
-                        <div class="secondary__content--buttons--button">
-                            <i class="fa-solid fa-mobile-screen-button fa-solid-grey"></i>
-                            <p>Choisissez un restaurant</p>
+                <div class="secondary__restaurant__content">
+                    <h2 class="secondary__restaurant__content--title">La palette du goût</h2>
+                    <span class="secondary__restaurant__content--like">
+                        <i class="fa-regular fa-heart fa-2xl"></i>
+                    </span>
+                    <div class="secondary__restaurant__content--buttons">
+                        <h3 class="secondary__restaurant__content--buttons--title">Entrées</h3>
+                        <span class="secondary__restaurant__content--buttons--border"></span>
+                        <div class="secondary__restaurant__content--buttons--button">
+                            <div class="secondary__restaurant__content--buttons--button--cards">
+                                <p class="secondary__restaurant__content--buttons--button--cards--title">Fricassée d'escargots</p>
+                                <p class="secondary__restaurant__content--buttons--button--cards--subtitle">Au piment d'Espelette</p>
+                            </div>
+                            <span class="secondary__restaurant__content--buttons--button--price">
+                                <p>25€</p>
+                            </span>
                         </div>
+                    </div>
+                    <!-- <div class="secondary__restaurant__content--buttons">
+                        <p class="secondary__restaurant__content--buttons--number">1</p>
                     </div>
                     <div class="secondary__content--buttons">
                         <p class="secondary__content--buttons--number">2</p>
@@ -56,15 +65,15 @@
                             <i class="fa-solid fa-store fa-solid-purple"></i>
                             <p>Dégustez au restaurant</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="terciary__content">
+                <!-- <div class="terciary__content">
                     <h2 class="terciary__content--title">Restaurants</h2>
                     <section class="restaurants">
-                        <a href="./restaurants/restaurant-1.html">
+                        <a href="#">
                             <article class="terciary__content--cards">
                                 <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image plat de La palette du goût">
+                                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du Vieux-Port">
                                     <span class="terciary__content--cards--image--new">Nouveau</span>
                                 </div>
                                 <div class="terciary__content--cards--card-content">
@@ -81,7 +90,7 @@
                         <a href="#">
                             <article class="terciary__content--cards">
                                 <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image plat de La note enchantée">
+                                    <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du Vieux-Port">
                                     <span class="terciary__content--cards--image--new">Nouveau</span>
                                 </div>
                                 <div class="terciary__content--cards--card-content">
@@ -98,7 +107,7 @@
                         <a href="#">
                             <article class="terciary__content--cards">
                                 <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image plat À la française">
+                                    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image du Vieux-Port">
                                 </div>
                                 <div class="terciary__content--cards--card-content">
                                     <div class="terciary__content--cards--card-content--text">
@@ -114,7 +123,7 @@
                         <a href="#">
                             <article class="terciary__content--cards">
                                 <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image plat Le délice des sens">
+                                    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du Vieux-Port">
                                 </div>
                                 <div class="terciary__content--cards--card-content">
                                     <div class="terciary__content--cards--card-content--text">
@@ -128,7 +137,7 @@
                             </article>
                         </a>
                     </section>
-                </div>
+                </div> -->
             </main>
             <footer class="footer">
                 <ul>
