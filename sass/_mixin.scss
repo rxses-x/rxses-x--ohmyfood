@@ -1,0 +1,35 @@
+@mixin main-button-style {
+    background: linear-gradient(193.33deg, map.get($ohmyfood-variable, "purple") -11.44%, map.get($ohmyfood-variable, "pink") 123.93%);
+    box-shadow: 0px 4px 10px 0px #00000040;
+    border: initial;
+    border-radius: 25px;
+    transition: transform 500ms ease;
+    @include text-style($font-size: 16px, $font-weight: 500, $line-height: 18.75px);
+}
+
+@mixin flex-display($width: 100%, $flex-direction: column, $justify-content: space-between, $align-items: center, $gap: 0px) {
+    width: $width;
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin grid-display($width: 100%, $column: 1, $gap: 0px) {
+    width: $width;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat($column, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin text-style($font-family: map.get($ohmyfood-variable, "roboto"), $font-size, $font-style: normal, $font-weight, $line-height, $text-align: center, $color: map.get($ohmyfood-variable, "white")) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    text-align: $text-align;
+    color: $color;
+}
