@@ -1,0 +1,36 @@
+.fa-solid {
+    color: #353535;
+}
+
+.purple-icon {
+    color: map.get($ohmyfood-variable, "purple");
+}
+
+.grey-icon {
+    color: map.get($ohmyfood-variable, "grey");
+}
+
+.heart-icon-toggle {
+    position: absolute;
+    top: 3vh;
+    right: 3vh;
+    input {
+        display: none; // Hide the checkbox input
+    }
+    
+    i {
+        font-size: 22px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    input:checked + i {
+        background: linear-gradient(193.33deg, map.get($ohmyfood-variable, "purple") -11.44%, map.get($ohmyfood-variable, "pink") 123.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        content: "\f004";
+        &.fa-heart {
+          font-weight: 900;
+        }
+    }
+}

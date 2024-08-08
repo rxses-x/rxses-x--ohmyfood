@@ -1,0 +1,8 @@
+.main-button {
+    background: linear-gradient(193.33deg, map.get($ohmyfood-variable, "purple") -11.44%, map.get($ohmyfood-variable, "pink") 123.93%);
+    box-shadow: 0px 4px 10px 0px #00000040;
+    border: initial;
+    border-radius: 25px;
+    transition: transform 500ms ease;
+    @include text-style($font-size: 16px, $font-weight: 500, $line-height: 18.75px);
+}

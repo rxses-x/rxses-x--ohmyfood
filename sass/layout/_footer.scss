@@ -1,0 +1,30 @@
+// main footer
+
+.footer {
+    background-color: map.get($ohmyfood-variable, "footer-background");
+    padding: 22px 25px;
+    @include text-style($font-family: map.get($ohmyfood-variable, "shrikland"), $font-size: 18px, $font-weight: 400, $text-align: left, $line-height: 26.24px);
+    &__link {
+        font-family: map.get($ohmyfood-variable, "roboto");
+        margin-top: 7px;
+        i {
+            width: 11px;
+            height: 13px;
+            top: 2px;
+            margin-right: 11px;
+            color: map.get($ohmyfood-variable, "white");
+        }
+        li {
+            // text-align: left;
+            padding-top: 7px;
+            font-size: 16px;
+            line-height: 18.75px;
+        }
+        &--bold a {
+            font-weight: 500;
+        }
+        &--normal a {
+            font-weight: 400;
+        }
+    }
+}

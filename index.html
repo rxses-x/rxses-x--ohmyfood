@@ -16,7 +16,17 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="primary__container">
+        <!-- <div class="spiner-container">
+            <div class="spiner-container__spin">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+        </div> -->
+        <!-- <div class="spiner-container">
+            <div class="spiner-container__spinner">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+        </div> -->
+        <div class="primary__container" id="primary__container">
             <header class="header">
                 <h1 class="header__title">Ohmyfood</h1>
                 <div class="header__search">
@@ -57,72 +67,76 @@
                 <div class="terciary-content">
                     <h2 class="terciary-content__title">Restaurants</h2>
                     <section class="restaurants">
-                        <a href="./restaurants/restaurant-1.html">
-                            <article class="terciary-content__cards">
+                        <article class="terciary-content__cards">
+                            <a href="./restaurants/restaurant-1.html">
                                 <div class="terciary-content__cards--image">
                                     <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image plat de La palette du goût">
                                     <span class="terciary-content__cards--image--new">Nouveau</span>
                                 </div>
-                                <div class="terciary-content__cards--card-content">
-                                    <div class="terciary-content__cards--card-content--text">
-                                        <h3 class="terciary-content__cards--card-content--text--title">La palette du goût</h3>
-                                        <p class="terciary-content__cards--card-content--text--subtitle">Brooklyn</p>
-                                        <span class="terciary-content__cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
+                            </a>
+                            <div class="terciary-content__cards--card-content">
+                                <div class="terciary-content__cards--card-content--text">
+                                    <h3 class="terciary-content__cards--card-content--text--title">La palette du goût</h3>
+                                    <p class="terciary-content__cards--card-content--text--subtitle">Brooklyn</p>
+                                    <label class="heart-icon-toggle">
+                                        <input type="checkbox">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </label>
                                 </div>
-                            </article>
-                        </a>
-                        <a href="./restaurants/restaurant-2.html">
-                            <article class="terciary-content__cards">
+                            </div>
+                        </article>
+                        <article class="terciary-content__cards">
+                            <a href="./restaurants/restaurant-2.html">
                                 <div class="terciary-content__cards--image">
                                     <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image plat de La note enchantée">
                                     <span class="terciary-content__cards--image--new">Nouveau</span>
                                 </div>
-                                <div class="terciary-content__cards--card-content">
-                                    <div class="terciary-content__cards--card-content--text">
-                                        <h3 class="terciary-content__cards--card-content--text--title">La note enchantée</h3>
-                                        <p class="terciary-content__cards--card-content--text--subtitle">Charonne</p>
-                                        <span class="terciary-content__cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
+                            </a>
+                            <div class="terciary-content__cards--card-content">
+                                <div class="terciary-content__cards--card-content--text">
+                                    <h3 class="terciary-content__cards--card-content--text--title">La note enchantée</h3>
+                                    <p class="terciary-content__cards--card-content--text--subtitle">Charonne</p>
+                                    <label class="heart-icon-toggle">
+                                        <input type="checkbox">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </label>
                                 </div>
-                            </article>
-                        </a>
-                        <a href="./restaurants/restaurant-3.html">
-                            <article class="terciary-content__cards">
+                            </div>
+                        </article>
+                        <article class="terciary-content__cards">
+                            <a href="./restaurants/restaurant-3.html">
                                 <div class="terciary-content__cards--image">
                                     <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image plat À la française">
                                 </div>
-                                <div class="terciary-content__cards--card-content">
-                                    <div class="terciary-content__cards--card-content--text">
-                                        <h3 class="terciary-content__cards--card-content--text--title">À la française</h3>
-                                        <p class="terciary-content__cards--card-content--text--subtitle">Cité Rouge</p>
-                                        <span class="terciary-content__cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
+                            </a>
+                            <div class="terciary-content__cards--card-content">
+                                <div class="terciary-content__cards--card-content--text">
+                                    <h3 class="terciary-content__cards--card-content--text--title">À la française</h3>
+                                    <p class="terciary-content__cards--card-content--text--subtitle">Cité Rouge</p>
+                                    <label class="heart-icon-toggle">
+                                        <input type="checkbox">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </label>
                                 </div>
-                            </article>
-                        </a>
-                        <a href="./restaurants/restaurant-4.html">
-                            <article class="terciary-content__cards">
+                            </div>
+                        </article>
+                        <article class="terciary-content__cards">
+                            <a href="./restaurants/restaurant-4.html">
                                 <div class="terciary-content__cards--image">
                                     <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image plat Le délice des sens">
                                 </div>
-                                <div class="terciary-content__cards--card-content">
-                                    <div class="terciary-content__cards--card-content--text">
-                                        <h3 class="terciary-content__cards--card-content--text--title">Le délice des sens</h3>
-                                        <p class="terciary-content__cards--card-content--text--subtitle">Folie-Méricourt</p>
-                                        <span class="terciary-content__cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
+                            </a>
+                            <div class="terciary-content__cards--card-content">
+                                <div class="terciary-content__cards--card-content--text">
+                                    <h3 class="terciary-content__cards--card-content--text--title">Le délice des sens</h3>
+                                    <p class="terciary-content__cards--card-content--text--subtitle">Folie-Méricourt</p>
+                                    <label class="heart-icon-toggle">
+                                        <input type="checkbox">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </label>
                                 </div>
-                            </article>
-                        </a>
+                            </div>
+                        </article>
                     </section>
                 </div>
             </main>
