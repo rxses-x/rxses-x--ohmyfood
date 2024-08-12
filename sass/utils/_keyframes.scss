@@ -12,22 +12,33 @@
 }
 
 @keyframes fadeOut {
-    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+    0% {
         opacity: 1;
     }
     100% {
         opacity: 0;
-        visibility: hidden;
+        visibility: hidden; /* Ensure spinner is hidden after animation */
     }
 }
 
 @keyframes fadeIn {
-    0% {
+    0%, 50% {
         opacity: 0;
         overflow: hidden;
     }
     100% {
         opacity: 1;
         overflow: auto;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start below the view */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

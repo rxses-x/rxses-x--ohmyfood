@@ -1,0 +1,140 @@
+// main restaurant content
+
+.primary-restaurant-content {
+    article {
+        div {
+            height: 275px;
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.secondary-restaurant-content {
+    @include flex-display($justify-content: flex-start, $align-items: initial);
+    position: relative;
+    margin-top: -50px;
+    padding: 32px 13px 40px;
+    background: #F6F6F6;
+    border-radius: 50px 50px 0 0;
+    text-align: justify;
+    &__title-container {
+        &--title {
+            @include text-style($font-family: map.get($ohmyfood-variable, "shrikland"), $font-size: 28px, $font-weight: 400, $line-height: 40.82px, $font-style: italic, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+        }
+        &--like {
+            margin-left: 295px;
+            top: 4vh;
+            right: auto;
+        }
+    }
+    &__buttons {
+        margin-top: 42px;
+    }
+    &__buttons-title {
+        padding-bottom: 7px;
+        text-transform: uppercase;
+        @include text-style($font-size: 16px, $font-weight: 300, $line-height: 18.75px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+        // height: 27px;
+    }
+    &__buttons-border {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 0px;
+        bottom: 4px;
+        border: 2px solid map.get($ohmyfood-variable, "light-green");
+        margin-bottom: 12px;
+    }
+    &__button {
+        position: relative;
+        margin-bottom: 12px;
+        opacity: 0;
+        transform: translateY(20px); /* Start below the view */
+        animation: fadeInUp 0.8s ease forwards;
+        &-card {
+            flex: 1;
+            display: grid;
+            padding: 12px 47px 36px 15px;
+            width: 100%;
+            height: 69px;
+            border-radius: 15.04px;
+            background: #FFFFFF;
+            box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+            padding-bottom: 5px;
+            white-space: nowrap;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            & .secondary-restaurant-content__card-title {
+                @include text-style($font-size: 18px, $font-weight: 500, $line-height: 21.09px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+            }
+            & .secondary-restaurant-content__card-subtitle {
+                @include text-style($font-size: 15.04px, $font-weight: 300, $line-height: 17.63px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+            }
+            &:hover .secondary-restaurant-content__button-price {
+                transform: translateX(-60px)
+            }
+            &:hover .secondary-restaurant-content__button-check {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        &-price {
+            position: absolute;
+            top: 4.2vh;
+            right: 1.5vh;
+            transition: transform 0.3s ease;
+            @include text-style($font-size: 15.04px, $font-weight: 700, $line-height: 17.63px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+            p {
+                bottom: 1.8vh;
+                left: 29.5vh;
+            }
+        }
+        &-check {
+            position: absolute;
+            display: flex;
+            background-color: map.get($ohmyfood-variable, "light-green");
+            border-radius: 0 15px 15px 0;
+            height: 100%;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+            font-size: 20px;
+            cursor: pointer;
+            i {
+                color: map.get($ohmyfood-variable, "white");
+                padding: 24.97px 19.42px;
+                font-size: 20px;
+            }
+        }
+        &-order {
+            @include flex-display($flex-direction: row, $justify-content: center);
+            margin-top: 40px;
+            button {
+                padding: 16px 49px;
+                &:hover {
+                    cursor: pointer;
+                    background: linear-gradient(200.64deg, map.get($ohmyfood-variable, "purple") -5.2%, map.get($ohmyfood-variable, "pink") 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+                    background: linear-gradient(193.33deg, lighten(map.get($ohmyfood-variable, "purple"), 5), lighten(map.get($ohmyfood-variable, "pink"), 5));
+                    transform: scale(1.03);
+                    box-shadow: 0px 4px 15px 0px #00000059;
+                }
+            }
+        }
+    }
+    &__button:nth-of-type(1) {
+        animation-delay: 0.2s;
+    }
+    &__button:nth-of-type(2) {
+        animation-delay: 0.4s;
+    }
+    &__button:nth-of-type(3) {
+        animation-delay: 0.6s;
+    }
+}

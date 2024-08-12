@@ -53,7 +53,7 @@
             padding-right: 23px;
             font-size: 18px;
         }
-        &--text {
+        &-text {
             @include text-style($font-size: 16px, $font-weight: 500, $text-align: left, $line-height: 18.75px, $color: map.get($ohmyfood-variable, "black"));
         }
     }
@@ -84,51 +84,44 @@
         margin-top: 15px;
         @include grid-display($gap: 18px 0px)
     }
-    &__cards {
+    &__card {
         border-radius: 15px;
         overflow: hidden;
         background: map.get($ohmyfood-variable, "white");
-        &--image {
+        &-image {
             position: relative;
             img {
                 width: 100%;
                 height: 174px;
                 display: block;
             }
-            &--new {
-                position: absolute;
-                top: 1vh;
-                right: 1vh;
-                width: 80px;
-                height: 29px;
-                padding: 7px 9px;
-                background: map.get($ohmyfood-variable, "light-green");
-                box-shadow: 0px 2px 4px 0px #00000026;
-                @include text-style($font-size: 14px, $font-weight: 500, $line-height: 16.41px, $text-align: justify, $color: map.get($ohmyfood-variable, "dark-green"));
-            }
         }
-        &--card-content {
-            padding: 16px 13px;
-            position: relative;
-            &--text {
-                &--title {
-                    padding-bottom: 5px;
-                    @include text-style($font-size: 18px, $font-weight: 700, $text-align: left, $line-height: 21.09px, $color: map.get($ohmyfood-variable, "black"));
-                }
-                &--subtitle {
-                    @include text-style($font-size: 17px, $font-weight: 300, $text-align: left, $line-height: 19.92px, $color: map.get($ohmyfood-variable, "black"));
-                    width: 247px;
-                    height: 24px;
-                    top: 215px;
-                    left: 13px;
-                    padding-bottom: 12px;
-                }
-            }
-            // &--like {
-            //     position: absolute;
-            //     top: 3vh;
-            //     right: 3vh;
-            // }
+        &-new {
+            position: absolute;
+            top: 1vh;
+            right: 1vh;
+            width: 80px;
+            height: 29px;
+            padding: 7px 9px;
+            background: map.get($ohmyfood-variable, "light-green");
+            box-shadow: 0px 2px 4px 0px #00000026;
+            @include text-style($font-size: 14px, $font-weight: 500, $line-height: 16.41px, $text-align: justify, $color: map.get($ohmyfood-variable, "dark-green"));
+        }
+    }
+    &__card-content {
+        padding: 16px 13px;
+        position: relative;
+        & .card-content__text-title {
+            padding-bottom: 5px;
+            @include text-style($font-size: 18px, $font-weight: 700, $text-align: left, $line-height: 21.09px, $color: map.get($ohmyfood-variable, "black"));
+        }
+        & .card-content__text-subtitle {
+            @include text-style($font-size: 17px, $font-weight: 300, $text-align: left, $line-height: 19.92px, $color: map.get($ohmyfood-variable, "black"));
+            width: 247px;
+            height: 24px;
+            top: 215px;
+            left: 13px;
+            padding-bottom: 12px;
         }
     }
 }
