@@ -292,30 +292,6 @@ ul {
   color: #7E7E7E;
 }
 
-.heart-icon-toggle {
-  position: absolute;
-  top: 3vh;
-  right: 3vh;
-}
-.heart-icon-toggle input {
-  display: none;
-}
-.heart-icon-toggle i {
-  font-size: 22px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.heart-icon-toggle input:checked + i {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  content: "\f004";
-}
-.heart-icon-toggle input:checked + i.fa-heart {
-  font-weight: 900;
-}
-
 #home-container {
   opacity: 0;
   animation: fadeIn 4s forwards;
@@ -637,13 +613,16 @@ ul {
   transform: translateY(20px); /* Start below the view */
 }
 .menu__card:nth-of-type(1) .menu__card-content {
-  animation: fadeInUp 0.8s ease forwards 0.2s;
+  animation: fadeInUp 0.4s ease forwards 0.2s;
 }
 .menu__card:nth-of-type(2) .menu__card-content {
   animation: fadeInUp 0.4s ease forwards 0.4s;
 }
 .menu__card:nth-of-type(3) .menu__card-content {
   animation: fadeInUp 0.4s ease forwards 0.6s;
+}
+.menu__card:nth-of-type(4) .menu__card-content {
+  animation: fadeInUp 0.4s ease forwards 0.8s;
 }
 .menu__card-checkbox {
   display: none;
