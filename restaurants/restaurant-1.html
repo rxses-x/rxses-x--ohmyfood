@@ -16,128 +16,154 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="primary__container">
+        <div id="restaurant-container">
             <header class="header">
-                <i class="fa-solid fa-arrow-left"></i>
+                <a href="../index.html"><i class="fa-solid fa-arrow-left header-arrow"></i></a>
                 <h1 class="header__title">Ohmyfood</h1>
             </header>
             <main>
-                <div class="primary__restaurant__content">
-                    <a href="#">
-                        <article class="primary__restaurant__content--cards">
-                            <div class="primary__restaurant__content--cards--image">
-                                <img src="../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image de La palette du goût">
-                            </div>
-                        </article>
-                    </a>
+                <div class="restaurant-details">
+                    <article>
+                        <div>
+                            <img src="../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image de La palette du goût">
+                        </div>
+                    </article>
                 </div>
-                <div class="secondary__restaurant__content">
-                    <h2 class="secondary__restaurant__content--title">La palette du goût</h2>
-                    <span class="secondary__restaurant__content--like">
-                        <i class="fa-regular fa-heart fa-2xl"></i>
-                    </span>
-                    <div class="secondary__restaurant__content--buttons">
-                        <h3 class="secondary__restaurant__content--buttons--title">Entrées</h3>
-                        <span class="secondary__restaurant__content--buttons--border"></span>
-                        <div class="secondary__restaurant__content--buttons--button">
-                            <div class="secondary__restaurant__content--buttons--button--cards">
-                                <p class="secondary__restaurant__content--buttons--button--cards--title">Fricassée d'escargots</p>
-                                <p class="secondary__restaurant__content--buttons--button--cards--subtitle">Au piment d'Espelette</p>
-                            </div>
-                            <span class="secondary__restaurant__content--buttons--button--price">
-                                <p>25€</p>
-                            </span>
+                <div class="menu">
+                    <h2 class="menu__title">La palette du goût</h2>
+                    <input type="checkbox" id="heart-menu" class="menu__checkbox">
+                    <label for="heart-menu" class="menu__content">
+                        <span class="menu__like">
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                    </label>
+                    <div class="menu__buttons">
+                        <h3 class="menu__buttons-title">Entrées</h3>
+                        <span class="menu__buttons-border"></span>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox1" class="menu__card-checkbox">
+                            <label for="checkbox1" class="menu__card-content">
+                                <p class="menu__card-title">Fricassée d'escargots</p>
+                                <p class="menu__card-subtitle">Au piment d'Espelette</p>
+                                <span class="menu__card-price"><p>25€</p></span>
+                                <div class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox2" class="menu__card-checkbox">
+                            <label for="checkbox2" class="menu__card-content">
+                                <p class="menu__card-title">Foie gras de canard mi-cuit</p>
+                                <p class="menu__card-subtitle">Et ses copeaux de truffe noire</p>
+                                <span class="menu__card-price"><p>35€</p></span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox3" class="menu__card-checkbox">
+                            <label for="checkbox3" class="menu__card-content">
+                                <p class="menu__card-title">Œuf au plat</p>
+                                <p class="menu__card-subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                                <span class="menu__card-price"><p>30€</p></span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
-                    <!-- <div class="secondary__restaurant__content--buttons">
-                        <p class="secondary__restaurant__content--buttons--number">1</p>
-                    </div>
-                    <div class="secondary__content--buttons">
-                        <p class="secondary__content--buttons--number">2</p>
-                        <div class="secondary__content--buttons--button">
-                            <i class="fa-solid fa-list-ul fa-solid-grey"></i>
-                            <p>Composez votre menu</p>
+                    <div class="menu__buttons">
+                        <h3 class="menu__buttons-title">Plats</h3>
+                        <span class="menu__buttons-border"></span>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox4" class="menu__card-checkbox">
+                            <label for="checkbox4" class="menu__card-content">
+                                <p class="menu__card-title">Filet de bœuf aux herbes</p>
+                                <p class="menu__card-subtitle">Accompagné de sa ribambelle de légumes</p>
+                                <span class="menu__card-price">
+                                    <p>40€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox5" class="menu__card-checkbox">
+                            <label for="checkbox5" class="menu__card-content">
+                                <p class="menu__card-title">Parmentier de queue de bœuf</p>
+                                <p class="menu__card-subtitle">À la truffe noire sur sa purée de panais</p>
+                                <span class="menu__card-price">
+                                    <p>35€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox6" class="menu__card-checkbox">
+                            <label for="checkbox6" class="menu__card-content">
+                                <p class="menu__card-title">Filet de turbot</p>
+                                <p class="menu__card-subtitle">Aux agrumes</p>
+                                <span class="menu__card-price">
+                                    <p>44€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
-                    <div class="secondary__content--buttons">
-                        <p class="secondary__content--buttons--number">3</p>
-                        <div class="secondary__content--buttons--button">
-                            <i class="fa-solid fa-store fa-solid-purple"></i>
-                            <p>Dégustez au restaurant</p>
+                    <div class="menu__buttons">
+                        <h3 class="menu__buttons-title">Desserts</h3>
+                        <span class="menu__buttons-border"></span>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox7" class="menu__card-checkbox">
+                            <label for="checkbox7" class="menu__card-content">
+                                <p class="menu__card-title">Paris-Brest</p>
+                                <p class="menu__card-subtitle">Revisité</p>
+                                <span class="menu__card-price">
+                                    <p>18€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
                         </div>
-                    </div> -->
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox8" class="menu__card-checkbox">
+                            <label for="checkbox8" class="menu__card-content">
+                                <p class="menu__card-title">Macaron au chocolat d'exception</p>
+                                <p class="menu__card-subtitle">Et glace à la vanille de Madagascar</p>
+                                <span class="menu__card-price">
+                                    <p>22€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="menu__card">
+                            <input type="checkbox" id="checkbox9" class="menu__card-checkbox">
+                            <label for="checkbox9" class="menu__card-content">
+                                <p class="menu__card-title">Mousse au chocolat</p>
+                                <p class="menu__card-subtitle">Au piment d'Espelette et à la truffe noire</p>
+                                <span class="menu__card-price">
+                                    <p>23€</p>
+                                </span>
+                                <span class="menu__card-check">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="terciary__content">
-                    <h2 class="terciary__content--title">Restaurants</h2>
-                    <section class="restaurants">
-                        <a href="#">
-                            <article class="terciary__content--cards">
-                                <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du Vieux-Port">
-                                    <span class="terciary__content--cards--image--new">Nouveau</span>
-                                </div>
-                                <div class="terciary__content--cards--card-content">
-                                    <div class="terciary__content--cards--card-content--text">
-                                        <h3 class="terciary__content--cards--card-content--text--title">La palette du goût</h3>
-                                        <p class="terciary__content--cards--card-content--text--subtitle">Brooklyn</p>
-                                        <span class="terciary__content--cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="terciary__content--cards">
-                                <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Image du Vieux-Port">
-                                    <span class="terciary__content--cards--image--new">Nouveau</span>
-                                </div>
-                                <div class="terciary__content--cards--card-content">
-                                    <div class="terciary__content--cards--card-content--text">
-                                        <h3 class="terciary__content--cards--card-content--text--title">La note enchantée</h3>
-                                        <p class="terciary__content--cards--card-content--text--subtitle">Charonne</p>
-                                        <span class="terciary__content--cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="terciary__content--cards">
-                                <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image du Vieux-Port">
-                                </div>
-                                <div class="terciary__content--cards--card-content">
-                                    <div class="terciary__content--cards--card-content--text">
-                                        <h3 class="terciary__content--cards--card-content--text--title">À la française</h3>
-                                        <p class="terciary__content--cards--card-content--text--subtitle">Cité Rouge</p>
-                                        <span class="terciary__content--cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="terciary__content--cards">
-                                <div class="terciary__content--cards--image">
-                                    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du Vieux-Port">
-                                </div>
-                                <div class="terciary__content--cards--card-content">
-                                    <div class="terciary__content--cards--card-content--text">
-                                        <h3 class="terciary__content--cards--card-content--text--title">Le délice des sens</h3>
-                                        <p class="terciary__content--cards--card-content--text--subtitle">Folie-Méricourt</p>
-                                        <span class="terciary__content--cards--card-content--like">
-                                            <i class="fa-regular fa-heart fa-lg"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-                    </section>
-                </div> -->
+                <div class="menu__button-order">
+                    <button type="button" class="main-button">Commander</button>
+                </div>
             </main>
             <footer class="footer">
                 <ul>

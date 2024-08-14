@@ -1,6 +1,11 @@
 // main restaurant content
 
-.primary-restaurant-content {
+#restaurant-container {
+    opacity: 0;
+    animation: fadeOutFlash 700ms forwards;
+}
+
+.restaurant-details {
     article {
         div {
             height: 275px;
@@ -13,82 +18,156 @@
     }
 }
 
-.secondary-restaurant-content {
-    @include flex-display($justify-content: flex-start, $align-items: initial);
+.menu {
+    @include flex-display(
+		$justify-content: flex-start,
+		$align-items: initial
+	);
     position: relative;
     margin-top: -50px;
     padding: 32px 13px 40px;
-    background: #F6F6F6;
+    background: map.get($ohmyfood-variable, "background-white");
     border-radius: 50px 50px 0 0;
-    text-align: justify;
-    &__title-container {
-        &--title {
-            @include text-style($font-family: map.get($ohmyfood-variable, "shrikland"), $font-size: 28px, $font-weight: 400, $line-height: 40.82px, $font-style: italic, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
-        }
-        &--like {
-            margin-left: 295px;
-            top: 4vh;
-            right: auto;
-        }
+	&__title {
+        @include text-style(
+            $font-family: map.get($ohmyfood-variable, "shrikland"),
+            $font-size: 28px, $font-weight: 400, $line-height: 40.82px, 
+            $font-style: italic, $text-align: justify, 
+            $color: map.get($ohmyfood-variable, "black")
+        );
+    }
+	&__checkbox {
+		display: none;
+		&:checked + .menu__content, .menu__like {
+			background: linear-gradient(
+				193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
+				map.get($ohmyfood-variable, "pink") 123.93%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			content: "\f004";
+			i {
+				&.fa-heart {
+					font-weight: 900;
+				}
+			}
+		}
+	}
+	&__content {
+		position: absolute;
+        margin-left: 295px;
+        top: 4vh;
+		right: auto;
+		i {
+			font-size: 22px;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
     }
     &__buttons {
         margin-top: 42px;
+        &-title {
+            padding-bottom: 7px;
+            text-transform: uppercase;
+            @include text-style(
+                $font-size: 16px,
+				$font-weight: 300,
+				$line-height: 18.75px,
+                $text-align: justify,
+                $color: map.get($ohmyfood-variable, "black")
+            );
+        }
+        &-border {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 0px;
+            bottom: 4px;
+            border: 2px solid map.get($ohmyfood-variable, "light-green");
+            margin-bottom: 12px;
+        }
     }
-    &__buttons-title {
-        padding-bottom: 7px;
-        text-transform: uppercase;
-        @include text-style($font-size: 16px, $font-weight: 300, $line-height: 18.75px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
-        // height: 27px;
-    }
-    &__buttons-border {
+    &__card {
         position: relative;
-        display: block;
-        width: 40px;
-        height: 0px;
-        bottom: 4px;
-        border: 2px solid map.get($ohmyfood-variable, "light-green");
         margin-bottom: 12px;
-    }
-    &__button {
-        position: relative;
-        margin-bottom: 12px;
-        opacity: 0;
         transform: translateY(20px); /* Start below the view */
-        animation: fadeInUp 0.8s ease forwards;
-        &-card {
+        &:nth-of-type(1) .menu__card-content {
+            animation: fadeInUp 0.8s ease forwards 0.2s;
+        }
+          
+        &:nth-of-type(2) .menu__card-content {
+            animation: fadeInUp 0.4s ease forwards 0.4s;
+        }
+          
+        &:nth-of-type(3) .menu__card-content {
+            animation: fadeInUp 0.4s ease forwards 0.6s;
+        }
+        
+        &-checkbox {
+            display: none;
+			&:checked + .menu__card-content .menu__card-price {
+				transform: translateX(-60px);
+			}
+			&:checked + .menu__card-content .menu__card-check {
+				opacity: 1;
+                transform: translateX(0);
+			}
+			&:checked + .menu__card-content {
+				.menu__card {
+					&-title, &-subtitle {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						max-width: calc(100% - 90px);
+					}
+				}
+			}
+        }
+        &-content {
             flex: 1;
             display: grid;
             padding: 12px 47px 36px 15px;
             width: 100%;
             height: 69px;
             border-radius: 15.04px;
-            background: #FFFFFF;
+            background: map.get($ohmyfood-variable, "white");
             box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
             padding-bottom: 5px;
-            white-space: nowrap;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            & .secondary-restaurant-content__card-title {
-                @include text-style($font-size: 18px, $font-weight: 500, $line-height: 21.09px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
-            }
-            & .secondary-restaurant-content__card-subtitle {
-                @include text-style($font-size: 15.04px, $font-weight: 300, $line-height: 17.63px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
-            }
-            &:hover .secondary-restaurant-content__button-price {
-                transform: translateX(-60px)
-            }
-            &:hover .secondary-restaurant-content__button-check {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            opacity: 0;
+            cursor: pointer;
+            animation-fill-mode: forwards;
+        }
+        &-title {
+            @include text-style(
+				$font-size: 18px,
+				$font-weight: 500,
+				$line-height: 21.09px,
+				$text-align: justify,
+				$color: map.get($ohmyfood-variable, "black")
+			);
+        }
+        &-subtitle {
+            @include text-style(
+				$font-size: 15.04px,
+				$font-weight: 300,
+				$line-height: 17.63px,
+				$text-align: justify,
+				$color: map.get($ohmyfood-variable, "black")
+			);
         }
         &-price {
             position: absolute;
             top: 4.2vh;
             right: 1.5vh;
             transition: transform 0.3s ease;
-            @include text-style($font-size: 15.04px, $font-weight: 700, $line-height: 17.63px, $text-align: justify, $color: map.get($ohmyfood-variable, "black"));
+            @include text-style(
+				$font-size: 15.04px,
+				$font-weight: 700,
+				$line-height: 17.63px,
+				$text-align: justify,
+				$color: map.get($ohmyfood-variable, "black")
+			);
             p {
                 bottom: 1.8vh;
                 left: 29.5vh;
@@ -103,38 +182,42 @@
             right: 0;
             top: 0;
             opacity: 0;
-            transform: translateX(100%);
+			overflow: hidden;
             transition: all 0.3s ease;
             font-size: 20px;
-            cursor: pointer;
             i {
                 color: map.get($ohmyfood-variable, "white");
                 padding: 24.97px 19.42px;
                 font-size: 20px;
             }
         }
+    }
+    &__button {
         &-order {
-            @include flex-display($flex-direction: row, $justify-content: center);
-            margin-top: 40px;
+            @include flex-display(
+				$flex-direction: row,
+				$justify-content: center
+			);
+            margin: 40px 0px;
             button {
                 padding: 16px 49px;
                 &:hover {
                     cursor: pointer;
-                    background: linear-gradient(200.64deg, map.get($ohmyfood-variable, "purple") -5.2%, map.get($ohmyfood-variable, "pink") 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-                    background: linear-gradient(193.33deg, lighten(map.get($ohmyfood-variable, "purple"), 5), lighten(map.get($ohmyfood-variable, "pink"), 5));
+                    background: linear-gradient(
+						200.64deg,
+						map.get($ohmyfood-variable, "purple") -5.2%,
+						map.get($ohmyfood-variable, "pink") 110.74%),
+						linear-gradient(0deg, rgba(255, 255, 255, 0.15),
+						rgba(255, 255, 255, 0.15)
+					);
+                    background: linear-gradient(
+						193.33deg, lighten(map.get($ohmyfood-variable, "purple"), 5),
+						lighten(map.get($ohmyfood-variable, "pink"), 5)
+					);
                     transform: scale(1.03);
                     box-shadow: 0px 4px 15px 0px #00000059;
                 }
             }
         }
-    }
-    &__button:nth-of-type(1) {
-        animation-delay: 0.2s;
-    }
-    &__button:nth-of-type(2) {
-        animation-delay: 0.4s;
-    }
-    &__button:nth-of-type(3) {
-        animation-delay: 0.6s;
     }
 }
