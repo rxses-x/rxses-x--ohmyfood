@@ -60,13 +60,13 @@
     @include flex-display(
         $align-items: baseline
     );
-    padding: 48px 20px 68px;
+    padding: 48px 20px;
     @include tablet-responsive {
-        padding: 20px 105.68px;
+        padding: 48px 105.68px
     }
     
     @include desktop-responsive {
-        padding: 20px 175.68px;
+        padding: 48px 175.68px;
     };
 
     &__title {

@@ -344,16 +344,16 @@ ul {
   justify-content: space-between;
   align-items: baseline;
   gap: 0px;
-  padding: 48px 20px 68px;
+  padding: 48px 20px;
 }
 @media all and (min-width: 768px) {
   .functionality {
-    padding: 20px 105.68px;
+    padding: 48px 105.68px;
   }
 }
 @media all and (min-width: 1440px) {
   .functionality {
-    padding: 20px 175.68px;
+    padding: 48px 175.68px;
   }
 }
 .functionality__title {
