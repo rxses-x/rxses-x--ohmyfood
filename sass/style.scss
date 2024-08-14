@@ -17,27 +17,3 @@ $dev-border: 2px dotted rgb(240, 122, 177);
 
 @import "./pages/home";
 @import "./pages/restaurant";
-
-// main container
-
-#primary__container {
-    opacity: 0;
-    animation: fadeIn 2s forwards 2s;
-}
-
-// primary restaurant content
-
-.primary-restaurant-content {
-    &--cards {
-        &--image {
-            height: 275px;
-            img {
-                width: 100%;
-                position: relative;
-                height: 100%;
-                border: 1px solid blue;
-            }
-            
-        }
-    }
-}

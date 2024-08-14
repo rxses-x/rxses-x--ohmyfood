@@ -18,6 +18,17 @@
     100% {
         opacity: 0;
         visibility: hidden; /* Ensure spinner is hidden after animation */
+        display: none;
+        z-index: -1;
+    }
+}
+
+@keyframes fadeOutFlash {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
