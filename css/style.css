@@ -644,6 +644,12 @@ ul {
 }
 .menu__content {
   position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
   margin-left: 295px;
   top: 4vh;
   right: auto;
@@ -655,7 +661,7 @@ ul {
 }
 @media all and (min-width: 1440px) {
   .menu__content {
-    margin-left: 851.5px;
+    margin-left: 481px;
   }
 }
 .menu__buttons {
