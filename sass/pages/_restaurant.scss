@@ -23,50 +23,68 @@
 		$justify-content: flex-start,
 		$align-items: initial
 	);
-    position: relative;
-    margin-top: -50px;
-    padding: 32px 13px 40px;
-    background: map.get($ohmyfood-variable, "background-white");
-    border-radius: 50px 50px 0 0;
-	&__title {
+    @include tablet-responsive {
+        padding: 0 48px;
+    }
+    @include desktop-responsive {
+        padding: 0 193px;
+    }
+    &__container {
+        position: relative;
+        margin-top: -50px;
+        padding: 32px 13px 40px;
+        background: map.get($ohmyfood-variable, "background-white");
+        border-radius: 50px 50px 0 0;
+        @include desktop-responsive {
+            padding: 32px 201.5px;
+        }
+    }
+    &__title {
         @include text-style(
             $font-family: map.get($ohmyfood-variable, "shrikland"),
             $font-size: 28px, $font-weight: 400, $line-height: 40.82px, 
             $font-style: italic, $text-align: justify, 
             $color: map.get($ohmyfood-variable, "black")
         );
+        @include desktop-responsive {
+            text-align: center;
+        }
     }
-	&__checkbox {
-		display: none;
-		&:checked + .menu__content, .menu__like {
-			background: linear-gradient(
-				193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
-				map.get($ohmyfood-variable, "pink") 123.93%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			content: "\f004";
-			i {
-				&.fa-heart {
-					font-weight: 900;
-				}
-			}
-		}
-	}
-	&__content {
-		position: absolute;
+    &__checkbox {
+        display: none;
+        &:checked + .menu__content, .menu__like {
+            background: linear-gradient(
+                193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
+                map.get($ohmyfood-variable, "pink") 123.93%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            content: "\f004";
+            i {
+                &.fa-heart {
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+    &__content {
+        position: absolute;
         margin-left: 295px;
         top: 4vh;
-		right: auto;
-		i {
-			font-size: 22px;
-			cursor: pointer;
-			transition: color 0.3s ease;
-		}
+        right: auto;
+        i {
+            font-size: 22px;
+            cursor: pointer;
+            transition: color 0.3s ease-out;
+        }
+        @include desktop-responsive {
+            margin-left: 851.5px;
+
+        }
     }
     &__buttons {
-        margin-top: 42px;
+        margin: 42px 0;
         &-title {
             padding-bottom: 7px;
             text-transform: uppercase;
@@ -91,7 +109,7 @@
     &__card {
         position: relative;
         margin-bottom: 12px;
-        transform: translateY(20px); /* Start below the view */
+        // transform: translateY(20px); /* Start below the view */÷
         &:nth-of-type(1) .menu__card-content {
             animation: fadeInUp 0.4s ease forwards 0.2s;
         }
@@ -117,6 +135,7 @@
 			&:checked + .menu__card-content {
 				.menu__card {
 					&-title, &-subtitle {
+                        transition: all 0.3s ease-out;
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -199,7 +218,6 @@
 				$flex-direction: row,
 				$justify-content: center
 			);
-            margin: 40px 0px;
             button {
                 padding: 16px 49px;
                 &:hover {

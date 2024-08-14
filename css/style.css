@@ -346,6 +346,16 @@ ul {
   gap: 0px;
   padding: 48px 20px 68px;
 }
+@media all and (min-width: 768px) {
+  .functionality {
+    padding: 20px 105.68px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .functionality {
+    padding: 20px 175.68px;
+  }
+}
 .functionality__title {
   font-family: Roboto;
   font-size: 24px;
@@ -363,6 +373,15 @@ ul {
   grid-template-rows: auto;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 24.92px;
+}
+@media all and (min-width: 1440px) {
+  .functionality__buttons {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
 }
 .functionality__button {
   width: 100%;
@@ -425,6 +444,16 @@ ul {
   background: #F6F6F6;
   padding: 54px 20px;
 }
+@media all and (min-width: 768px) {
+  .restaurants {
+    padding: 54px 105.68px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .restaurants {
+    padding: 20px 175.68px;
+  }
+}
 .restaurants__title {
   font-family: Roboto;
   font-size: 24px;
@@ -441,6 +470,24 @@ ul {
   grid-template-rows: auto;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 18px 0px;
+}
+@media all and (min-width: 768px) {
+  .restaurants section {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px 47.84px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .restaurants section {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 95.68px;
+  }
 }
 .restaurants section article {
   border-radius: 15px;
@@ -521,7 +568,7 @@ ul {
 .restaurants__card-content i {
   font-size: 22px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
 }
 
 #restaurant-container {
@@ -545,11 +592,28 @@ ul {
   justify-content: flex-start;
   align-items: initial;
   gap: 0px;
+}
+@media all and (min-width: 768px) {
+  .menu {
+    padding: 0 48px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .menu {
+    padding: 0 193px;
+  }
+}
+.menu__container {
   position: relative;
   margin-top: -50px;
   padding: 32px 13px 40px;
   background: #F6F6F6;
   border-radius: 50px 50px 0 0;
+}
+@media all and (min-width: 1440px) {
+  .menu__container {
+    padding: 32px 201.5px;
+  }
 }
 .menu__title {
   font-family: Shrikhand;
@@ -559,6 +623,11 @@ ul {
   line-height: 40.82px;
   text-align: justify;
   color: #000000;
+}
+@media all and (min-width: 1440px) {
+  .menu__title {
+    text-align: center;
+  }
 }
 .menu__checkbox {
   display: none;
@@ -582,10 +651,15 @@ ul {
 .menu__content i {
   font-size: 22px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
+}
+@media all and (min-width: 1440px) {
+  .menu__content {
+    margin-left: 851.5px;
+  }
 }
 .menu__buttons {
-  margin-top: 42px;
+  margin: 42px 0;
 }
 .menu__buttons-title {
   padding-bottom: 7px;
@@ -610,7 +684,6 @@ ul {
 .menu__card {
   position: relative;
   margin-bottom: 12px;
-  transform: translateY(20px); /* Start below the view */
 }
 .menu__card:nth-of-type(1) .menu__card-content {
   animation: fadeInUp 0.4s ease forwards 0.2s;
@@ -635,6 +708,7 @@ ul {
   transform: translateX(0);
 }
 .menu__card-checkbox:checked + .menu__card-content .menu__card-title, .menu__card-checkbox:checked + .menu__card-content .menu__card-subtitle {
+  transition: all 0.3s ease-out;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -714,7 +788,6 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 0px;
-  margin: 40px 0px;
 }
 .menu__button-order button {
   padding: 16px 49px;

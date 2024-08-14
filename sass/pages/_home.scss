@@ -61,6 +61,13 @@
         $align-items: baseline
     );
     padding: 48px 20px 68px;
+    @include tablet-responsive {
+        padding: 20px 105.68px;
+    }
+    
+    @include desktop-responsive {
+        padding: 20px 175.68px;
+    };
 
     &__title {
         @include text-style(
@@ -78,6 +85,12 @@
         @include grid-display(
             $gap: 24.92px
         );
+        @include desktop-responsive {
+            @include grid-display(
+                $gap: 24px,
+                $column: 3
+            );
+        };
     }
 
     &__button {
@@ -140,6 +153,12 @@
     background: map.get($ohmyfood-variable, "background-white");
     padding: 54px 20px;
 
+    @include tablet-responsive {
+        padding: 54px 105.68px;
+    };
+    @include desktop-responsive {
+        padding: 20px 175.68px;
+    };
     &__title {
         @include text-style(
             $font-size: 24px,
@@ -155,6 +174,15 @@
         @include grid-display(
             $gap: 18px 0px
         );
+        @include tablet-responsive {
+            @include grid-display(
+                $column: 2,
+                $gap: 35px 47.84px
+            );
+        };
+        @include desktop-responsive {
+            @include grid-display($column: 2, $gap: 50px 95.68px);
+        };
         article {
             border-radius: 15px;
             overflow: hidden;
@@ -241,7 +269,7 @@
             i {
                 font-size: 22px;
                 cursor: pointer;
-                transition: color 0.3s ease;
+                transition: color 0.3s ease-out;
             }
         }
     }
