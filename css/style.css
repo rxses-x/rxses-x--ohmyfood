@@ -172,7 +172,7 @@
 .footer__link--bold a {
   font-weight: 500;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .footer__link--bold + .footer__link--normal {
     margin-left: 40px;
   }

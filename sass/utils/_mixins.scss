@@ -43,6 +43,12 @@
     }
 }
 
+@mixin laptop-responsive {
+    @media screen and (min-width: map.get($ohmyfood-variable, "laptop")) {
+        @content
+    }
+}
+
 @mixin desktop-responsive {
     @media screen and (min-width: map.get($ohmyfood-variable, "desktop")) {
         @content

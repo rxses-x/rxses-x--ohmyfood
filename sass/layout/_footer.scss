@@ -55,7 +55,8 @@
             a {
                 font-weight: 500;
             }
-            @include desktop-responsive {
+
+            @include laptop-responsive {
                 + .footer__link--normal {
                     margin-left: 40px; // Adjust this value as needed
                 }
