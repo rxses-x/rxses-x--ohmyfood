@@ -68,9 +68,8 @@
                 193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
                 map.get($ohmyfood-variable, "pink") 123.93%
             );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
             font-weight: 900;
             content: "\f004";
         }

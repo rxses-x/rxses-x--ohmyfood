@@ -423,7 +423,7 @@ ul {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: none;
+  justify-content: normal;
   align-items: center;
   gap: 0px;
   position: relative;
@@ -588,9 +588,8 @@ ul {
 }
 .restaurants__card-checkbox:checked + .restaurants__card-content, .restaurants__card-checkbox .restaurants__card-like {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   content: "\f004";
 }
 .restaurants__card-checkbox:checked + .restaurants__card-content i.fa-heart, .restaurants__card-checkbox .restaurants__card-like i.fa-heart {
@@ -678,9 +677,8 @@ ul {
 }
 .menu__checkbox:checked + i {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   font-weight: 900;
   content: "\f004";
 }

@@ -96,7 +96,7 @@
     &__button {
         @include flex-display(
             $flex-direction: row,
-            $justify-content: none
+            $justify-content: normal
         );
         position: relative;
         padding: 28.99px 0px;
@@ -181,7 +181,10 @@
             );
         };
         @include desktop-responsive {
-            @include grid-display($column: 2, $gap: 50px 95.68px);
+            @include grid-display(
+                $column: 2,
+                $gap: 50px 95.68px
+            );
         };
         article {
             border-radius: 15px;
@@ -251,9 +254,8 @@
                     193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
                     map.get($ohmyfood-variable, "pink") 123.93%
                 );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
                 background-clip: text;
+                color: transparent;
                 content: "\f004";
                 i {
                     &.fa-heart {
