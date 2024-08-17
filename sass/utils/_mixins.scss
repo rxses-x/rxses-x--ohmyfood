@@ -38,13 +38,13 @@
 }
 
 @mixin tablet-responsive {
-    @media all and (min-width: map.get($ohmyfood-variable, "tablet")) {
+    @media screen and (min-width: map.get($ohmyfood-variable, "tablet")) {
         @content
     }
 }
 
 @mixin desktop-responsive {
-    @media all and (min-width: map.get($ohmyfood-variable, "desktop")) {
+    @media screen and (min-width: map.get($ohmyfood-variable, "desktop")) {
         @content
     }
 }

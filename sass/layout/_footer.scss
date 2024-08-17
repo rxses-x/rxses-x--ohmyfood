@@ -32,16 +32,12 @@
         @include tablet-responsive {
             @include flex-display(
                 $flex-direction: row,
-                $justify-content: flex-start,
-                $gap: 21px
-            );
-        }
-        @include desktop-responsive {
-            @include flex-display(
-                $flex-direction: row,
                 $justify-content: end,
                 $gap: 21px
             );
+            padding-right: 33px;
+        }
+        @include desktop-responsive {
             padding-right: 155px;
         }
         i {
