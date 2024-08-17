@@ -85,7 +85,6 @@
     }
     &__buttons {
         margin: 42px 0;
-        @extend %main-button;
         &-title {
             padding-bottom: 7px;
             text-transform: uppercase;
@@ -225,22 +224,7 @@
 			);
             button {
                 padding: 16px 49px;
-                &:hover {
-                    cursor: pointer;
-                    background: linear-gradient(
-						200.64deg,
-						map.get($ohmyfood-variable, "purple") -5.2%,
-						map.get($ohmyfood-variable, "pink") 110.74%),
-						linear-gradient(0deg, rgba(255, 255, 255, 0.15),
-						rgba(255, 255, 255, 0.15)
-					);
-                    background: linear-gradient(
-						193.33deg, lighten(map.get($ohmyfood-variable, "purple"), 5),
-						lighten(map.get($ohmyfood-variable, "pink"), 5)
-					);
-                    transform: scale(1.03);
-                    box-shadow: 0px 4px 15px 0px #00000059;
-                }
+                @extend %main-button;
             }
         }
     }

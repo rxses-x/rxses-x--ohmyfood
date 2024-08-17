@@ -92,6 +92,13 @@
   border: none;
   outline: none;
   background-color: transparent;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  color: #353535;
 }
 .header__search ::placeholder {
   font-family: Roboto;
@@ -302,7 +309,7 @@ ul {
   background: #99E2D0;
 }
 
-.menu__buttons, .main__button button {
+.menu__button-order button, .main__button button {
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border: initial;
@@ -315,6 +322,13 @@ ul {
   line-height: 18.75px;
   text-align: center;
   color: #FFFFFF;
+}
+.menu__button-order button:hover, .main__button button:hover {
+  cursor: pointer;
+  background: linear-gradient(0.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(0.33deg, #a16be0, #ff93e1);
+  transform: scale(1.03);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .fa-solid {
@@ -365,13 +379,6 @@ ul {
 }
 .main__button button {
   padding: 13px 18.75px;
-}
-.main__button button:hover {
-  cursor: pointer;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background: linear-gradient(193.33deg, #a16be0, #ff93e1);
-  transform: scale(1.03);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .functionality {
@@ -488,7 +495,7 @@ ul {
 }
 @media screen and (min-width: 1440px) {
   .restaurants {
-    padding: 20px 175.68px;
+    padding: 20px 175.68px 30px;
   }
 }
 .restaurants__title {
@@ -834,13 +841,6 @@ ul {
 }
 .menu__button-order button {
   padding: 16px 49px;
-}
-.menu__button-order button:hover {
-  cursor: pointer;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background: linear-gradient(193.33deg, #a16be0, #ff93e1);
-  transform: scale(1.03);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 /*# sourceMappingURL=style.css.map */
