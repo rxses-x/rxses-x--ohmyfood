@@ -49,12 +49,23 @@
             padding-top: 7px;
             font-size: 16px;
             line-height: 18.75px;
+
         }
-        &--bold a {
-            font-weight: 500;
+        &--bold {
+            a {
+                font-weight: 500;
+            }
+            @include desktop-responsive {
+                + .footer__link--normal {
+                    margin-left: 40px; // Adjust this value as needed
+                }
+            }
+            
         }
-        &--normal a {
-            font-weight: 400;
+        &--normal {
+            a {
+                font-weight: 400;
+            }            
         }
     }
 }
