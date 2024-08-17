@@ -117,10 +117,6 @@
 @media screen and (min-width: 768px) {
   .footer {
     padding: 55px 25px 30px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer ul {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -139,7 +135,7 @@
   margin-top: 7px;
 }
 @media screen and (min-width: 768px) {
-  .footer__link {
+  .footer__link ul {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -150,7 +146,7 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .footer__link {
+  .footer__link ul {
     padding-right: 155px;
   }
 }
@@ -499,7 +495,7 @@ ul {
   text-align: left;
   color: #000000;
 }
-.restaurants section {
+.restaurants > div {
   margin-top: 15px;
   width: 100%;
   display: grid;
@@ -508,7 +504,7 @@ ul {
   grid-gap: 18px 0px;
 }
 @media screen and (min-width: 768px) {
-  .restaurants section {
+  .restaurants > div {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
@@ -517,7 +513,7 @@ ul {
   }
 }
 @media screen and (min-width: 1440px) {
-  .restaurants section {
+  .restaurants > div {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
@@ -525,7 +521,7 @@ ul {
     grid-gap: 50px 95.68px;
   }
 }
-.restaurants section article {
+.restaurants > div article {
   border-radius: 15px;
   overflow: hidden;
   background: #FFFFFF;
@@ -618,10 +614,10 @@ ul {
   animation: fadeOutFlash 700ms forwards;
 }
 
-.restaurant-details article div {
+.restaurant-details div {
   height: 275px;
 }
-.restaurant-details article div img {
+.restaurant-details div img {
   position: relative;
   width: 100%;
   height: 100%;

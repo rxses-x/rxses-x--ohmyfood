@@ -168,8 +168,7 @@
             $color: map.get($ohmyfood-variable, "black")
         );
     }
-
-    section {
+    > div {
         margin-top: 15px;
         @include grid-display(
             $gap: 18px 0px

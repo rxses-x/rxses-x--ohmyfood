@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Ohmyfood Paris</title>
-        <meta name="description" content="Ohmyfood est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et de réduire leur temps d’attente dans les restaurants, car leur menu est préparé à l’avance.">
+        <meta name="description" content="Ohmyfood est une entreprise de commande de repas en ligne. Notre concept est de réduire leur temps d'attente dans les restaurants, car leur menu est préparé à l'avance.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="restaurants">
                     <h2 class="restaurants__title">Restaurants</h2>
-                    <section>
+                    <div>
                         <article>
                             <a href="./restaurants/restaurant-1.html">
                                 <div class="restaurants__card-image">
@@ -71,9 +71,9 @@
                             </a>
                             <div class="restaurants__card">
                                 <h3 class="restaurants__card-title">La palette du goût</h3>
-                                <p class="restaurants__card-subtitle">Brooklyn</p>
-                                <input type="checkbox" id="heart1" class="restaurants__card-checkbox">
-                                <label for="heart1" class="restaurants__card-content">
+                                <h4 class="restaurants__card-subtitle">Brooklyn</h4>
+                                <input type="checkbox" id="checkbox-like-1" class="restaurants__card-checkbox">
+                                <label for="checkbox-like-1" class="restaurants__card-content">
                                     <span class="restaurants__card-like">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -89,9 +89,9 @@
                             </a>
                             <div class="restaurants__card">
                                 <h3 class="restaurants__card-title">La note enchantée</h3>
-                                <p class="restaurants__card-subtitle">Charonne</p>
-                                <input type="checkbox" id="heart2" class="restaurants__card-checkbox">
-                                <label for="heart2" class="restaurants__card-content">
+                                <h4 class="restaurants__card-subtitle">Charonne</h4>
+                                <input type="checkbox" id="checkbox-like-2" class="restaurants__card-checkbox">
+                                <label for="checkbox-like-2" class="restaurants__card-content">
                                     <span class="restaurants__card-like">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -106,9 +106,9 @@
                             </a>
                             <div class="restaurants__card">
                                 <h3 class="restaurants__card-title">À la française</h3>
-                                <p class="restaurants__card-subtitle">Cité Rouge</p>
-                                <input type="checkbox" id="heart3" class="restaurants__card-checkbox">
-                                <label for="heart3" class="restaurants__card-content">
+                                <h4 class="restaurants__card-subtitle">Cité Rouge</h4>
+                                <input type="checkbox" id="checkbox-like-3" class="restaurants__card-checkbox">
+                                <label for="checkbox-like-3" class="restaurants__card-content">
                                     <span class="restaurants__card-like">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -123,24 +123,28 @@
                             </a>
                             <div class="restaurants__card">
                                 <h3 class="restaurants__card-title">Le délice des sens</h3>
-                                <p class="restaurants__card-subtitle">Folie-Méricourt</p>
-                                <input type="checkbox" id="heart4" class="restaurants__card-checkbox">
-                                <label for="heart4" class="restaurants__card-content">
+                                <h4 class="restaurants__card-subtitle">Folie-Méricourt</h4>
+                                <input type="checkbox" id="checkbox-like-4" class="restaurants__card-checkbox">
+                                <label for="checkbox-like-4" class="restaurants__card-content">
                                     <span class="restaurants__card-like">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
                                 </label>
                             </div>
                         </article>
-                    </section>
+                    </div>
                 </div>
             </main>
             <footer class="footer">
-                <ul>
-                    <li>
-                        <a class="footer__logo">ohmyfood</a>
-                    </li>
-                    <div class="footer__link">
+                <div class="footer__logo">
+                    <ul>
+                        <li>
+                            <a>ohmyfood</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__link">
+                    <ul>
                         <li class="footer__link--bold">
                             <i class="fa-solid fa-utensils"></i>
                             <a href="#">Proposer un restaurant</a>
@@ -155,8 +159,8 @@
                         <li class="footer__link--normal">
                             <a href="mailto:rxses-x-contact@ohmyfood.com">Contact</a>
                         </li>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </footer>
         </div>
     </body>

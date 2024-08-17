@@ -12,14 +12,10 @@
     );
     @include tablet-responsive {
         padding: 55px 25px 30px;
-    }
-    ul {
-        @include tablet-responsive {
-            @include flex-display(
-                $flex-direction: row-reverse,
-                $justify-content: normal,
-            );
-        }
+        @include flex-display(
+            $flex-direction: row-reverse,
+            $justify-content: normal,
+        );
     }
     &__logo {
         @include desktop-responsive {
@@ -29,16 +25,18 @@
     &__link {
         font-family: map.get($ohmyfood-variable, "roboto");
         margin-top: 7px;
-        @include tablet-responsive {
-            @include flex-display(
-                $flex-direction: row,
-                $justify-content: end,
-                $gap: 21px
-            );
-            padding-right: 33px;
-        }
-        @include desktop-responsive {
-            padding-right: 155px;
+        ul {
+            @include tablet-responsive {
+                @include flex-display(
+                    $flex-direction: row,
+                    $justify-content: end,
+                    $gap: 21px
+                );
+                padding-right: 33px;
+            }
+            @include desktop-responsive {
+                padding-right: 155px;
+            }
         }
         i {
             width: 11px;
