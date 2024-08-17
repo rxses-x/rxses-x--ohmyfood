@@ -19,7 +19,7 @@
         opacity: 0;
         visibility: hidden; /* Ensure spinner is hidden after animation */
         display: none;
-        z-index: -1;
+        z-index: -1; /* Ensure the spinner is not anymore on top of everything */
     }
 }
 

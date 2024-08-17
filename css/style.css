@@ -18,7 +18,7 @@
     opacity: 0;
     visibility: hidden; /* Ensure spinner is hidden after animation */
     display: none;
-    z-index: -1;
+    z-index: -1; /* Ensure the spinner is not anymore on top of everything */
   }
 }
 @keyframes fadeOutFlash {
@@ -571,6 +571,13 @@ ul {
   transition: color 0.3s ease-out;
 }
 
+.menu__card-checkbox:checked + .menu__card-content .menu__card-subtitle, .menu__card-checkbox:checked + .menu__card-content .menu__card-title {
+  transition: all 0.3s ease-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #restaurant-container {
   opacity: 0;
   animation: fadeOutFlash 700ms forwards;
@@ -616,6 +623,7 @@ ul {
   }
 }
 .menu__title {
+  margin-right: 24px;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -632,36 +640,30 @@ ul {
 .menu__checkbox {
   display: none;
 }
-.menu__checkbox:checked + .menu__content, .menu__checkbox .menu__like {
+.menu__checkbox:checked + i {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 900;
   content: "\f004";
 }
-.menu__checkbox:checked + .menu__content i.fa-heart, .menu__checkbox .menu__like i.fa-heart {
-  font-weight: 900;
-}
 .menu__content {
-  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: normal;
   align-items: center;
   gap: 0px;
-  margin-left: 295px;
-  top: 4vh;
-  right: auto;
 }
 .menu__content i {
   font-size: 22px;
   cursor: pointer;
   transition: color 0.3s ease-out;
 }
-@media all and (min-width: 1440px) {
+@media all and (min-width: 768px) {
   .menu__content {
-    margin-left: 481px;
+    justify-content: center;
   }
 }
 .menu__buttons {
@@ -709,16 +711,15 @@ ul {
 .menu__card-checkbox:checked + .menu__card-content .menu__card-price {
   transform: translateX(-60px);
 }
+.menu__card-checkbox:checked + .menu__card-content .menu__card-title {
+  max-width: calc(100% - 50px);
+}
+.menu__card-checkbox:checked + .menu__card-content .menu__card-subtitle {
+  max-width: calc(100% - 90px);
+}
 .menu__card-checkbox:checked + .menu__card-content .menu__card-check {
   opacity: 1;
-  transform: translateX(0);
-}
-.menu__card-checkbox:checked + .menu__card-content .menu__card-title, .menu__card-checkbox:checked + .menu__card-content .menu__card-subtitle {
-  transition: all 0.3s ease-out;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 90px);
+  transform: translateX(0px);
 }
 .menu__card-content {
   flex: 1;
@@ -733,6 +734,7 @@ ul {
   opacity: 0;
   cursor: pointer;
   animation-fill-mode: forwards;
+  overflow: hidden;
 }
 .menu__card-title {
   font-family: Roboto;
@@ -756,6 +758,7 @@ ul {
   position: absolute;
   top: 4.2vh;
   right: 1.5vh;
+  margin-left: auto;
   transition: transform 0.3s ease;
   font-family: Roboto;
   font-size: 15.04px;
@@ -778,7 +781,6 @@ ul {
   right: 0;
   top: 0;
   opacity: 0;
-  overflow: hidden;
   transition: all 0.3s ease;
   font-size: 20px;
 }

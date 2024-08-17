@@ -1,3 +1,12 @@
+// extend
+
+%text-overflow {
+    transition: all 0.3s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 // main restaurant content
 
 #restaurant-container {
@@ -40,19 +49,21 @@
         }
     }
     &__title {
+        margin-right: 24px;
         @include text-style(
             $font-family: map.get($ohmyfood-variable, "shrikland"),
             $font-size: 28px, $font-weight: 400, $line-height: 40.82px, 
             $font-style: italic, $text-align: justify, 
             $color: map.get($ohmyfood-variable, "black")
         );
+        
         @include desktop-responsive {
             text-align: center;
         }
     }
     &__checkbox {
         display: none;
-        &:checked + .menu__content, .menu__like {
+        &:checked + i {
             background: linear-gradient(
                 193.33deg, map.get($ohmyfood-variable, "purple") -11.44%,
                 map.get($ohmyfood-variable, "pink") 123.93%
@@ -60,28 +71,19 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            font-weight: 900;
             content: "\f004";
-            i {
-                &.fa-heart {
-                    font-weight: 900;
-                }
-            }
         }
     }
     &__content {
-        position: absolute;
-        @include flex-display($flex-direction: row);
-        margin-left: 295px;
-        top: 4vh;
-        right: auto;
+        @include flex-display($flex-direction: row, $justify-content: normal);
         i {
             font-size: 22px;
             cursor: pointer;
             transition: color 0.3s ease-out;
         }
-        @include desktop-responsive {
-            margin-left: 481px;
-
+        @include tablet-responsive {
+            justify-content: center;
         }
     }
     &__buttons {
@@ -126,24 +128,25 @@
         
         &-checkbox {
             display: none;
-			&:checked + .menu__card-content .menu__card-price {
-				transform: translateX(-60px);
-			}
-			&:checked + .menu__card-content .menu__card-check {
-				opacity: 1;
-                transform: translateX(0);
-			}
 			&:checked + .menu__card-content {
-				.menu__card {
-					&-title, &-subtitle {
-                        transition: all 0.3s ease-out;
-						white-space: nowrap;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						max-width: calc(100% - 90px);
-					}
-				}
-			}
+                .menu__card {
+                    &-price {
+                        transform: translateX(-60px);
+                    }
+                    &-title {
+                        @extend %text-overflow;
+                        max-width: calc(100% - 50px);
+                    }
+                    &-subtitle {
+                        @extend %text-overflow;
+                        max-width: calc(100% - 90px);
+                    }
+                    &-check {
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+                }
+            }
         }
         &-content {
             flex: 1;
@@ -158,6 +161,7 @@
             opacity: 0;
             cursor: pointer;
             animation-fill-mode: forwards;
+            overflow: hidden;
         }
         &-title {
             @include text-style(
@@ -181,6 +185,7 @@
             position: absolute;
             top: 4.2vh;
             right: 1.5vh;
+            margin-left: auto;
             transition: transform 0.3s ease;
             @include text-style(
 				$font-size: 15.04px,
@@ -203,7 +208,8 @@
             right: 0;
             top: 0;
             opacity: 0;
-			overflow: hidden;
+			// overflow: hidden;
+            // transform: translateX(100%);
             transition: all 0.3s ease;
             font-size: 20px;
             i {
