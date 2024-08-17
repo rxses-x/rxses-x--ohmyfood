@@ -22,7 +22,8 @@
 
 @mixin text-style(
     $font-family: map.get($ohmyfood-variable, "roboto"),
-    $font-size, $font-style: normal,
+    $font-size,
+    $font-style: normal,
     $font-weight, $line-height,
     $text-align: center,
     $color: map.get($ohmyfood-variable, "white")
@@ -36,14 +37,14 @@
     color: $color;
 }
 
-@mixin desktop-responsive {
-    @media all and (min-width: map.get($ohmyfood-variable, "desktop")) {
+@mixin tablet-responsive {
+    @media all and (min-width: map.get($ohmyfood-variable, "tablet")) {
         @content
     }
 }
 
-@mixin tablet-responsive {
-    @media all and (min-width: map.get($ohmyfood-variable, "tablet")) {
+@mixin desktop-responsive {
+    @media all and (min-width: map.get($ohmyfood-variable, "desktop")) {
         @content
     }
 }

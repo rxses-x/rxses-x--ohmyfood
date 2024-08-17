@@ -3,10 +3,47 @@
 .footer {
     background-color: map.get($ohmyfood-variable, "footer-background");
     padding: 22px 25px;
-    @include text-style($font-family: map.get($ohmyfood-variable, "shrikland"), $font-size: 18px, $font-weight: 400, $text-align: left, $line-height: 26.24px);
+    @include text-style(
+        $font-family: map.get($ohmyfood-variable, "shrikland"),
+        $font-size: 18px,
+        $font-weight: 400,
+        $line-height: 26.24px,
+        $text-align: left,
+    );
+    @include tablet-responsive {
+        padding: 55px 25px 30px;
+    }
+    ul {
+        @include tablet-responsive {
+            @include flex-display(
+                $flex-direction: row-reverse,
+                $justify-content: normal,
+            );
+        }
+    }
+    &__logo {
+        @include desktop-responsive {
+            padding-right: 30px;
+        }
+    }
     &__link {
         font-family: map.get($ohmyfood-variable, "roboto");
         margin-top: 7px;
+        @include tablet-responsive {
+            @include flex-display(
+                $flex-direction: row,
+                $justify-content: flex-start,
+                $gap: 21px
+            );
+        }
+        @include desktop-responsive {
+            @include flex-display(
+                $flex-direction: row,
+                $justify-content: end,
+                $gap: 21px
+            );
+            padding-right: 155px;
+        }
         i {
             width: 11px;
             height: 13px;
@@ -15,7 +52,6 @@
             color: map.get($ohmyfood-variable, "white");
         }
         li {
-            // text-align: left;
             padding-top: 7px;
             font-size: 16px;
             line-height: 18.75px;
