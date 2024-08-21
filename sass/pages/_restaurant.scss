@@ -122,28 +122,29 @@
         &:nth-of-type(4) .menu__card-content {
             animation: fadeInUp 0.4s ease forwards 0.8s;
         }
+
+        &:hover .menu__card-content {
+            .menu__card {
+                &-price {
+                    transform: translateX(-60px);
+                }
+                &-title {
+                    @extend %text-overflow;
+                    max-width: calc(100% - 50px);
+                }
+                &-subtitle {
+                    @extend %text-overflow;
+                    max-width: calc(100% - 90px);
+                }
+                &-check {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+        }
         
         &-checkbox {
             display: none;
-			&:checked + .menu__card-content {
-                .menu__card {
-                    &-price {
-                        transform: translateX(-60px);
-                    }
-                    &-title {
-                        @extend %text-overflow;
-                        max-width: calc(100% - 50px);
-                    }
-                    &-subtitle {
-                        @extend %text-overflow;
-                        max-width: calc(100% - 90px);
-                    }
-                    &-check {
-                        opacity: 1;
-                        transform: translateX(0px);
-                    }
-                }
-            }
         }
         &-content {
             flex: 1;
@@ -206,7 +207,7 @@
             top: 0;
             opacity: 0;
 			// overflow: hidden;
-            // transform: translateX(100%);
+            transform: translateX(100%);
             transition: all 0.3s ease;
             font-size: 20px;
             i {
