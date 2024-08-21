@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "sass-run": "sass -w sass/style.scss css/style.css"
+  },
   "dependencies": {
     "node-sass": "^9.0.0",
     "sass": "^1.77.8"
