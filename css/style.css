@@ -612,7 +612,6 @@ ul {
 .restaurants__card-content i {
   font-size: 22px;
   cursor: pointer;
-  transition: color 0.3s ease-out;
 }
 
 .menu__card:hover .menu__card-content .menu__card-subtitle, .menu__card:hover .menu__card-content .menu__card-title {
@@ -702,7 +701,6 @@ ul {
 .menu__content i {
   font-size: 22px;
   cursor: pointer;
-  transition: color 0.3s ease-out;
 }
 @media screen and (min-width: 768px) {
   .menu__content {
